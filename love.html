@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,91 +7,92 @@
 
 <style>
 body {
-    text-align: center;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ff4d6d, #ff9a9e);
+    text-align: center;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
     color: white;
-    overflow: hidden;
-    padding: 20px;
+    overflow-x: hidden;
 }
 
-img {
-    width: 260px;
+.container {
+    padding: 40px 20px;
+}
+
+.photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
     border-radius: 20px;
-    margin-top: 30px;
     box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    margin-bottom: 20px;
 }
 
 h1 {
-    margin-top: 40px;
-    font-size: 34px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 p {
     font-size: 20px;
-    margin-top: 20px;
+    line-height: 1.6;
 }
 
 .heart {
     position: fixed;
     top: -10px;
+    font-size: 24px;
     animation: fall linear infinite;
 }
 
 @keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(110vh); }
 }
 </style>
 </head>
 
 <body>
 
-<img src="IMG-20250429-WA0077.jpg">
+<div class="container">
+
+<img src="./IMG-20250429-WA0077.jpg" class="photo">
 
 <h1>Tota… ❤️</h1>
 
 <p>
 If love had a face, it would look like you.<br>
-If peace had a voice, it would sound like you.
-</p>
+If peace had a voice, it would sound like you.<br><br>
 
-<p>
 You changed my world without even trying…<br>
-And I never want to imagine a version of life without you in it ❤️
-</p>
+And I never want to imagine a version of life without you in it ❤️<br><br>
 
-<p>
 So tonight… and every night after…<br>
 Will you choose me the way I choose you every single day? 💘
 </p>
 
-<p style="margin-top:20px; font-size:14px;">
-🎶 Now Playing: Ahla Ghanwa – Wael Jassar
-</p>
+</div>
 
-<!-- تشغيل الأغنية من الثانية 44 -->
+<!-- Song starts from 44 sec -->
 <iframe width="0" height="0"
-src="https://www.youtube.com/embed/VSJsmAIo_0s?autoplay=1&loop=1&playlist=VSJsmAIo_0s&start=44"
+src="https://www.youtube.com/embed/VSJsmAIo_0s?start=44&autoplay=1&loop=1&playlist=VSJsmAIo_0s"
 frameborder="0"
 allow="autoplay">
 </iframe>
 
 <script>
-/* قلوب نازلة */
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 5000);
+    }, 6000);
 }
 
 setInterval(createHeart, 300);
