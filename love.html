@@ -3,35 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Cristo 🤍</title>
+<title>Cristo 🤍 My Little Star</title>
 
 <style>
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #f4f4f4);
     text-align: center;
-    background: linear-gradient(135deg, #ffffff, #f3f3f3);
     color: #333;
     overflow: hidden;
 }
 
 .container {
     padding: 100px 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 30px;
+    font-size: 44px;
+    margin-bottom: 5px;
     color: #111;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #777;
 }
 
 p {
     font-size: 22px;
-    line-height: 1.8;
+    line-height: 1.9;
     max-width: 750px;
     margin: auto;
     color: #444;
+}
+
+.bold-line {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .heart {
@@ -39,7 +57,7 @@ p {
     top: -10px;
     font-size: 18px;
     animation: fall linear infinite;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 @keyframes fall {
@@ -54,19 +72,20 @@ p {
 <div class="container">
 
 <h1>Cristo 🤍</h1>
+<h2>My Little Star</h2>
 
 <p>
-You walked into my life quietly…<br>
-but somehow you became my loudest happiness.<br><br>
+I am proud of the person you are becoming.<br>
+Strong. Kind. Different.<br><br>
 
-You are my peace in the middle of everything,<br>
-my comfort without asking,<br>
-and my favorite place to rest my heart.<br><br>
+Never let anyone dim your light.<br>
+You were born to shine,<br>
+and I will always stand behind you. 🤍
+</p>
 
-With you, love feels simple… real… and safe.<br><br>
-
-And no matter what tomorrow brings,<br>
-I will always choose you.
+<p class="bold-line">
+No matter what happens,<br>
+I will always be your brother first. 🤍
 </p>
 
 </div>
@@ -85,7 +104,7 @@ function createHeart() {
     }, 7000);
 }
 
-setInterval(createHeart, 500);
+setInterval(createHeart, 600);
 </script>
 
 </body>
